@@ -72,18 +72,17 @@ The clients from any zone can look up the registry information (happens every 30
 
 默认情况下，自我保护是启用的，并且，默认的阈值是要大于当前注册数量的15%
 
-
 ---
 ## 五、Eureka VS Zookeeper
-### 5.1 Eureka保证AP
+### 1 Eureka保证AP
 Eureka服务器节点之间是对等的，只要有一个节点在，就可以正常提供服务。
 
 Eureka客户端的所有操作可能需要一段时间才能在Eureka服务器中反映出来，随后在其他Eureka客户端中反映出来。也就是说，客户端获取到的注册信息可能不是最新的，它并不保证强一致性
 
-### 5.2 Zookeeper保证CP
+### 2 Zookeeper保证CP
 Zookeeper集群中有一个Leader，多个Follower。Leader负责写，Follower负责读，ZK客户端连接到任何一个节点都是一样的，写操作完成以后要同步给所有Follower以后才会返回。如果Leader挂了，那么重新选出新的Leader，在此期间服务不可用。
 
-### 5.3 为什么用Eureka
+### 3 为什么用Eureka
 分布式系统大都可以归结为两个问题：数据一致性和防止单点故障。而作为注册中心的话，即使在一段时间内不一致，也不会有太大影响，所以在A和C之间选择A是比较适合该场景的。
 
 --
