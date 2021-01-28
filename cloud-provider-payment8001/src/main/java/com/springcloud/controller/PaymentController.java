@@ -25,7 +25,7 @@ public class PaymentController {
     @PostMapping(value = "/addPayment")
     public CommonResult addPayment(@RequestBody Payment payment) {
         int result = paymentService.create(payment);
-        log.info("*****插入结果：" + result);
+        log.info("addPayment插入结果：" + result);
         if (result > 0) {  //成功
             return new CommonResult(200, "插入数据库成功", result);
         } else {
@@ -33,14 +33,28 @@ public class PaymentController {
         }
     }
 
+    //请求方式一
     @GetMapping(value = "/getPaymentById")
     public CommonResult getPaymentById(@RequestParam("id") Integer id) {
         Payment payment = paymentService.getPaymentById(id);
-        log.info("*****查询结果：" + payment);
+        log.info("getPaymentById查询结果：" + payment);
         if (payment != null) {  //说明有数据，能查询成功
             return new CommonResult(200, "查询成功", payment);
         } else {
             return new CommonResult(444, "没有对应记录，查询ID：" + id, null);
         }
     }
+
+    //请求方式二
+    @GetMapping(value = "/getPaymentById2/{id}")
+    public CommonResult getPaymentById2(@PathVariable("id") Integer id) {
+        Payment payment = paymentService.getPaymentById(id);
+        log.info("getPaymentById查询结果：" + payment);
+        if (payment != null) {  //说明有数据，能查询成功
+            return new CommonResult(200, "查询成功", payment);
+        } else {
+            return new CommonResult(444, "没有对应记录，查询ID：" + id, null);
+        }
+    }
+
 }

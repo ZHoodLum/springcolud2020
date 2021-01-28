@@ -13,6 +13,7 @@
     <!--Maven的子moudle-->
     <modules>
         <module>cloud-provider-payment8001</module>
+        <module>cloud-consumer-order80</module>
     </modules>
 
     <!-- 统一管理jar包版本 -->
@@ -105,7 +106,9 @@
     </dependencyManagement>
 
     <build>
+        <finalName>springcloud2020</finalName>
         <plugins>
+            <!--下一段配置黏贴到父工程当中的pom里-->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
