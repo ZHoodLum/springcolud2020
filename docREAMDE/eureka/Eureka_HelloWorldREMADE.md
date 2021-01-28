@@ -28,7 +28,7 @@ Eureka是基于REST（Representational State Transfer）服务、服务注册与
 * 提供服务注册和发现的能力（通常就是微服务中的注册中心）；
 * 各个微服务节点通过配置启动后，会在EurekaServer中进行注册，这样EueekaServer中的服务注册表中将会存储所有可用的服务节点的信息，服务节点的信息可以在界面直观看到。
 
-![eureka1](../images/eureka1.png)
+![eureka1](../images/eureka/eureka1.png)
 ```
 The architecture above depicts how Eureka is deployed at Netflix and this is how you would typically run it. 
 There is one eureka cluster per region which knows only about instances in its region. 
