@@ -4,7 +4,7 @@ server:
 eureka:
   instance:
     #eureka服务端的实例名字
-#    hostname: localhost
+    #hostname: localhost
     #集群部署时hostname要写成下面的格式  eureka服务端的实例名称
     hostname: eureka7001.com
   client:
@@ -19,3 +19,9 @@ eureka:
       defaultZone: http://eureka7002.com:7002/eureka/
       #集群有多台时 相互注册
       #defaultZone: http://eureka7002.com:7002/eureka,http://eureka7003.com:7003/eureka
+
+  #是否开启自我保护机制 默认值为true
+  server:
+    enable-self-preservation : false
+    #处理时间
+    eviction-interval-timer-in-ms: 200

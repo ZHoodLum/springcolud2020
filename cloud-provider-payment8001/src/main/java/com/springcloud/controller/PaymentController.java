@@ -37,13 +37,13 @@ public class PaymentController {
      * 服务发现功能
      * @return
      */
-    @GetMapping(value = "/payment/discovery")
+    @GetMapping(value = "/discovery")
     public Object discovery(){
         List<String> services = discoveryClient.getServices();
         for (String element : services) {
             log.info("***** element:"+element);
         }
-        List<ServiceInstance> instances = discoveryClient.getInstances("CLOUD-PAYMENT-SERVICE");
+        List<ServiceInstance> instances = discoveryClient.getInstances("CLOUD-PROVIDER-PAYMENT");
         for (ServiceInstance instance : instances) {
             log.info(instance.getServiceId()+"\t"+instance.getHost()+"\t"+instance.getPort()+"\t"+instance.getUri());
         }
