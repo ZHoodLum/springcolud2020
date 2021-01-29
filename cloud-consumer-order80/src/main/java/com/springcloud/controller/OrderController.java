@@ -21,7 +21,12 @@ public class OrderController {
     @Resource
     private RestTemplate restTemplate;
 
-    public static final String PAYMENT_URL = "http://localhost:8001";
+//    public static final String PAYMENT_URL = "http://localhost:8001";
+//    地址更改为yml中服务的配置名称
+//    spring:
+//      application:
+//        name: cloud-provider-payment
+    public static final String PAYMENT_URL = "http://cloud-provider-payment";
 
     @PostMapping("/payment/addPayment")
     public CommonResult<Payment> addPayment(@RequestBody Payment payment) {
