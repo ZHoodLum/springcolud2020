@@ -5,9 +5,10 @@
 :----|:----|:----
 docREAMDE|Spring Cloud学习脑图，Spring Cloud组件知识点|[链接](docREAMDE/DOCREAMDE.md)
 cloud-api-commons|公共方法基础类、工具类、子工程公用的entity|[链接](cloud-api-commons)
-cloud-consumer-order80|消费方订单模块 80——注册中心使用的eureka|[链接](cloud-consumer-order80)
-cloud-consumerconsul-order80|消费方订单模块 80——注册中心使用的consul|[链接]( cloud-consumerconsul-order80)
-cloud-consumerzk-order80|消费方订单模块 80——注册中心使用的zookeeper|[链接](cloud-consumerzk-order80)
+cloud-consumer-feign-order80|消费方订单模块 80——注册中心使用的eureka—请求转发使用的openfeign|[链接](cloud-consumer-feign-order80)
+cloud-consumer-order80|消费方订单模块 80——注册中心使用的eureka——请求转发使用的ribbon+restTemplate|[链接](cloud-consumer-order80)
+cloud-consumerconsul-order80|消费方订单模块 80——注册中心使用的consul——请求转发使用的ribbon+restTemplate|[链接]( cloud-consumerconsul-order80)
+cloud-consumerzk-order80|消费方订单模块 80——注册中心使用的zookeeper——请求转发使用的ribbon+restTemplate|[链接](cloud-consumerzk-order80)
 cloud-eureka-server7001|eureka集群单点1——eureka7001|[链接](cloud-eureka-server7001)
 cloud-eureka-server7002|eureka集群单点2——eureka7001|[链接](cloud-eureka-server7002)
 cloud-provider-payment8001|提供方集群节点1——支付系统8001——注册中心使用的eureka(7001 7002)|[链接](cloud-provider-payment8001)
