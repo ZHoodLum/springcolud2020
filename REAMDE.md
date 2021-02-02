@@ -1,4 +1,4 @@
-# 关于springcloud的项目练习
+# 关于springcloud的demo练习
 
 ## 工程说明
 子项目名称|说明|链接
