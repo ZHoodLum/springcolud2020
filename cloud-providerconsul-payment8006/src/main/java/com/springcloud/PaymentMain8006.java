@@ -11,8 +11,9 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-public class PaymentMain006 {
+public class PaymentMain8006 {
     public static void main(String[] args) {
-          SpringApplication.run(PaymentMain006.class, args);
-     }
+      SpringApplication.run(PaymentMain8006.class, args);
+        System.out.println("访问8006地址：  http://localhost:8006/payment/consul ");
+    }
 }
