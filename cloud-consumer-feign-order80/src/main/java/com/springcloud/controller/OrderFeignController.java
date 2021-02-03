@@ -23,8 +23,23 @@ public class OrderFeignController {
     @Resource
     private PaymentFeignService paymentFeignService;
 
+    /**
+     * 测试使用open feign请求提供方
+     * @param id
+     * @return
+     */
     @GetMapping(value = "/payment/getPaymentByIdOpenFeign")
     public CommonResult<Payment> getPaymentByIdOpenFeign(@RequestParam("id") Integer id) {
         return paymentFeignService.getPaymentByIdOpenFeign(id);
     }
+
+    /**
+     * 测试openfeign超时请求
+     * @return
+     */
+    @GetMapping(value = "/payment/paymentFeignTiemOut")
+    public String paymentFeignTiemOut() {
+        return paymentFeignService.paymentFeignTiemOut();
+    }
+
 }

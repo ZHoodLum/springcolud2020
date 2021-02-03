@@ -19,4 +19,9 @@ public interface PaymentFeignService {
     //查询订单接口  调用的是提供方的controller接口
     @GetMapping(value = "/payment/getPaymentById")
     CommonResult<Payment> getPaymentByIdOpenFeign(@RequestParam("id") Integer id);
+
+    //超时测试 openfeign
+    @GetMapping(value = "/payment/timeout")
+    String paymentFeignTiemOut();
+
 }
