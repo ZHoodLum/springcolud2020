@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @ Author     ：Psyduckzzzz
@@ -102,7 +103,22 @@ public class PaymentController {
      */
     @GetMapping(value = "/lb")
     public String getPaymentLB(){
+
         return serverPort;
     }
 
+
+    /**
+     * 设置超时  默认业务超时  观察openfeign的动作  行为！！
+     * @return
+     */
+    @GetMapping(value = "/timeout")
+    public String paymentFeignTiemOut() {
+        try {
+            TimeUnit.SECONDS.sleep(3);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        return serverPort;
+    }
 }
