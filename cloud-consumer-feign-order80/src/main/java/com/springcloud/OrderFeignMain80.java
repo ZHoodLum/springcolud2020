@@ -16,5 +16,6 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 public class OrderFeignMain80 {
     public static void main(String[] args) {
           SpringApplication.run(OrderFeignMain80.class, args);
-     }
+          System.out.println("访问80地址：  http://localhost/consumer/payment ");
+    }
 }
