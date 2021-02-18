@@ -4,10 +4,7 @@ import com.springcloud.service.PaymentService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 
 /**
@@ -39,4 +36,19 @@ public class PaymentController {
         log.info("paymentInfo_TimeOut--------result" + result);
         return result;
     }
+
+
+    /**
+     * 服务熔断
+     * @param id
+     * @return
+     */
+    @GetMapping("/circuit")
+    public String paymentCircuitBreaker(@RequestParam("id") Integer id){
+        String result = paymentService.paymentCircuitBreaker(id);
+        log.info("*******result:"+result);
+        return result;
+    }
+
+
 }
