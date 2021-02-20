@@ -13,6 +13,7 @@ spring:
             - springcloud-config
       label: master
 
+
 # Eureka配置
 eureka:
   client:
