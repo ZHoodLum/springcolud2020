@@ -36,4 +36,9 @@ eureka:
     #eureka服务端收到最后一次心跳等待时间上限，单位是秒（默认值为90秒） 超时将剔除服务
     lease-expiration-duration-in-seconds: 2
 
-
+#暴露监控端点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
