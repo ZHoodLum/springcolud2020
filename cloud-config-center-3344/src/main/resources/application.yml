@@ -13,6 +13,12 @@ spring:
             - springcloud-config
       label: master
 
+  #rabbitmq相关配置
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
 
 # Eureka配置
 eureka:
@@ -39,3 +45,9 @@ eureka:
     #eureka服务端收到最后一次心跳等待时间上限，单位是秒（默认值为90秒） 超时将剔除服务
     lease-expiration-duration-in-seconds: 2
 
+# rabbitmq相关配置 暴露BUS刷新配置的端点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: 'bus-refresh'
