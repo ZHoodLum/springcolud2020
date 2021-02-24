@@ -36,23 +36,25 @@ public class PaymentController {
 
     /**
      * 服务发现功能
+     *
      * @return
      */
     @GetMapping(value = "/discovery")
-    public Object discovery(){
+    public Object discovery() {
         List<String> services = discoveryClient.getServices();
         for (String element : services) {
-            log.info("***** element:"+element);
+            log.info("***** element:" + element);
         }
         List<ServiceInstance> instances = discoveryClient.getInstances("CLOUD-PROVIDER-PAYMENT");
         for (ServiceInstance instance : instances) {
-            log.info(instance.getServiceId()+"\t"+instance.getHost()+"\t"+instance.getPort()+"\t"+instance.getUri());
+            log.info(instance.getServiceId() + "\t" + instance.getHost() + "\t" + instance.getPort() + "\t" + instance.getUri());
         }
         return this.discoveryClient;
     }
 
     /**
      * 添加支付订单
+     *
      * @param payment
      * @return
      */
@@ -69,6 +71,7 @@ public class PaymentController {
 
     /**
      * 根据ID查询订单信息
+     *
      * @param id
      * @return
      */
@@ -99,10 +102,11 @@ public class PaymentController {
 
     /**
      * 测试负载均衡代码  手写负载均衡算法 轮询算法
+     *
      * @return
      */
     @GetMapping(value = "/lb")
-    public String getPaymentLB(){
+    public String getPaymentLB() {
 
         return serverPort;
     }
@@ -110,6 +114,7 @@ public class PaymentController {
 
     /**
      * 设置超时  默认业务超时  观察openfeign的动作  行为！！
+     *
      * @return
      */
     @GetMapping(value = "/timeout")
@@ -121,4 +126,15 @@ public class PaymentController {
         }
         return serverPort;
     }
+
+    /**
+     * 解决监控微服务链接的问题
+     * @return
+     */
+    @GetMapping("/zipkin")
+    public String paymentZipkin() {
+        return "hi ,i'am paymentzipkin server fall back，welcome to good good!!";
+    }
+
+
 }
