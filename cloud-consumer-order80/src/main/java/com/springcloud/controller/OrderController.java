@@ -32,7 +32,7 @@ public class OrderController {
     @Resource
     private DiscoveryClient discoveryClient;
 
-//    public static final String PAYMENT_URL = "http://localhost:8001";
+    //    public static final String PAYMENT_URL = "http://localhost:8001";
 //    地址更改为yml中服务的配置名称
 //    spring:
 //      application:
@@ -41,6 +41,7 @@ public class OrderController {
 
     /**
      * postForObject方法
+     *
      * @param payment
      * @return
      */
@@ -52,6 +53,7 @@ public class OrderController {
 
     /**
      * postForEntity方法
+     *
      * @param payment
      * @return
      */
@@ -101,10 +103,11 @@ public class OrderController {
 
     /**
      * 验证手写负载均衡轮询代码
+     *
      * @return
      */
     @GetMapping(value = "/payment/lb")
-    public String getPaymentLB(){
+    public String getPaymentLB() {
         List<ServiceInstance> instances = discoveryClient.getInstances("CLOUD-PROVIDER-PAYMENT");
         if (instances == null || instances.size() <= 0) {
             return null;
@@ -113,6 +116,17 @@ public class OrderController {
         ServiceInstance serviceInstance = loadBalancer.instances(instances);
         URI uri = serviceInstance.getUri();
         return restTemplate.getForObject(uri + "payment/lb", String.class);
+    }
+
+    /**
+     * 监控微服务交易链接
+     * @return
+     */
+    // ====================> zipkin+sleuth
+    @GetMapping("/payment/zipkin")
+    public String paymentZipkin() {
+        String result = restTemplate.getForObject("http://localhost:8001" + "/payment/zipkin/", String.class);
+        return result;
     }
 
 
