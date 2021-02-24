@@ -110,4 +110,13 @@ public class PaymentController {
         return serverPort;
     }
 
+    /**
+     * 解决监控微服务链接的问题
+     * @return
+     */
+    @GetMapping("/zipkin")
+    public String paymentZipkin() {
+        return "hi ,i'am paymentzipkin server fall back，welcome to good good!!";
+    }
+
 }
