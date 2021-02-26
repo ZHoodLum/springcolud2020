@@ -1,0 +1,6 @@
+2021-02-23 19:08:16,663 INFO DEFAULT_GROUP@@nacos-payment-provider {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.122.1:9001:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-02-23 19:08:16,666 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@nacos-payment-provider, ips: 192.168.122.1:9001_true,
+
+2021-02-23 19:08:16,675 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@nacos-payment-provider, ips: 192.168.122.1:9001_true,
+
