@@ -20,6 +20,11 @@
         <dependency>
             <groupId>com.springcloud</groupId>
             <artifactId>cloud-api-commons</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.springcloud</groupId>
+            <artifactId>cloud-api-commons</artifactId>
             <version>${project.version}</version>
         </dependency>
 
