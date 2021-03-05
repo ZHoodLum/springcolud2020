@@ -54,3 +54,27 @@
 
 2021-03-03 11:30:01,989 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@cloudalibaba-sentinel-service, ips: 
 
+2021-03-03 15:05:38,429 INFO DEFAULT_GROUP@@cloudalibaba-sentinel-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.122.1:8401:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-03-03 15:05:38,432 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@cloudalibaba-sentinel-service, ips: 192.168.122.1:8401_true,
+
+2021-03-03 15:05:38,435 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@cloudalibaba-sentinel-service, ips: 192.168.122.1:8401_true,
+
+2021-03-03 15:39:39,667 INFO DEFAULT_GROUP@@cloudalibaba-sentinel-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.122.1:8401:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-03-03 15:39:39,667 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@cloudalibaba-sentinel-service, ips: 
+
+2021-03-03 15:39:48,141 INFO DEFAULT_GROUP@@cloudalibaba-sentinel-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.122.1:8401:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-03-03 15:39:48,141 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@cloudalibaba-sentinel-service, ips: 192.168.122.1:8401_true,
+
+2021-03-03 16:16:41,501 INFO DEFAULT_GROUP@@cloudalibaba-sentinel-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.122.1:8401:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-03-03 16:16:41,501 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@cloudalibaba-sentinel-service, ips: 
+
+2021-03-03 16:17:11,805 INFO DEFAULT_GROUP@@cloudalibaba-sentinel-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.122.1:8401:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-03-03 16:17:11,805 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@cloudalibaba-sentinel-service, ips: 192.168.122.1:8401_true,
+
+2021-03-03 16:17:11,805 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@cloudalibaba-sentinel-service, ips: 192.168.122.1:8401_true,
+
